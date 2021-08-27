@@ -177,7 +177,7 @@ function get_interface_list() {
 
 	if ($fopen_file = fopen($file_name, 'r')) {
 		while ($buffer = fgets($fopen_file, 4096)) {
-			if (preg_match("/eth[0-9][0-9]*/i", trim($buffer), $match)) {
+			if (preg_match("/ens[0-9][0-9]*/i", trim($buffer), $match)) {
 				$devices[] = $match[0];
 			}
 		}
