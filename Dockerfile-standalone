@@ -4,7 +4,7 @@ ENV TZ Asia/Jakarta
 
 RUN apt update && apt -y upgrade \
 && apt -y install libpng-dev libjpeg62-turbo-dev libfreetype6-dev libwebp-dev libmariadb-dev \
-&& && rm -rf /var/lib/apt/lists/* \
+&& rm -rf /var/lib/apt/lists/* \
 && ln -snf /usr/share/zoneinfo/$TZ /etc/localtime \
 && update-ca-certificates -f 
 RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
